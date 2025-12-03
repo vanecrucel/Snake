@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <title>Juego Snake Java Applet</title>
     
-    <script src="https://cjrtnc.leaningtech.com/cjres/cheerpj_applet_runner.js"></script>
+    <script src="https://cjrtnc.leaningtech.com/cjres/cheerpj_applet_runner.js"></script> 
     
     <style>
         body {
-            background: #f0f0f0;
+            /* ... estilos ... */
             text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-top: 20px;
-        }
-        h1 {
-            color: #333;
         }
         #applet-container {
             margin: 20px auto;
-            width: 600px; 
-            height: 450px; 
+            width: 600px;
+            height: 450px;
             border: 2px solid #333;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             display: inline-block;
         }
     </style>
@@ -34,14 +27,13 @@
     
     <div id="applet-container">
         <applet 
-            code="Snake.class"       archive="Snake.jar"      width="600"              height="450">            
+            code="Snake.class"       archive="Snake.jar"      width="600"              
+            height="450">            
             
             Tu navegador no soporta la ejecución de Applets.
         </applet>
     </div>
 
-    <p>Utiliza las teclas de flecha o WASD para jugar.</p>
-    
     <script>
         cheerpjInit();
     </script>
