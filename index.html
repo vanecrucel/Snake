@@ -1,11 +1,26 @@
-<div id="applet-container">
-    <div id="cheerpj_applet">
-        Tu navegador no soporta la ejecución de Applets.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego Snake Java Applet</title>
+    
+    <script src="https://cjrtnc.leaningtech.com/cjres/cheerpj_applet_runner.js"></script>
+    
+    </head>
+
+<body>
+    <h1>Snake - Clásico Applet de Java</h1>
+    
+    <div id="applet-container">
+        <div id="cheerpj_target">
+            El juego está cargando...
+        </div>
     </div>
-</div>
 
-<script>
-
-    cheerpjRunApplet("cheerpj_applet", "Snake.class", 600, 450, 
-                     {archive: "Snake.jar", code: "Snake.class"});
-</script>
+    <script>
+        // Esta línea es la única que debe cargar el Applet, NO cheerpjInit()
+        cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
+                         {archive: "Snake.jar"});
+    </script>
+</body>
+</html>
