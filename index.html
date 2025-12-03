@@ -18,14 +18,13 @@
         h1 {
             color: #333;
         }
-       
+
         #cheerpj_target {
             margin: 20px auto;
             width: 600px; 
             height: 450px; 
             border: 2px solid #333;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            
             display: block; 
             text-align: center;
             line-height: 450px;
@@ -39,15 +38,15 @@
     <h1>Snake - Clásico Applet de Java</h1>
     
     <div id="cheerpj_target">
-        El juego está cargando. Espere un momento...
+        El juego está cargando. Si tarda más de 30 segundos, revise el empaquetado del JAR.
     </div>
 
     <p>Utiliza las teclas de flecha o WASD para jugar.</p>
     
     <script>
-       
+        
         cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
-                         {archive: "Snake.jar"});
+                         {archive: "Snake.jar", code: "Snake.class", jar: "Snake.jar"});
     </script>
 
 </body>
