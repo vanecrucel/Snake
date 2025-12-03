@@ -9,44 +9,15 @@
     
     <script>
     
-        function initializeGame() {
-        
-            cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
-                             {archive: "Snake.jar", code: "Snake.class", jar: "Snake.jar"});
-        }
-
-      
         document.addEventListener('DOMContentLoaded', function() {
-            
-            setTimeout(initializeGame, 100); 
-        });
+    
+            setTimeout(function() {
+                cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
+                                 {archive: "Snake.jar", code: "Snake.class", jar: "Snake.jar"});
+            }, 100); 
     </script>
-
-    <style>
-        body {
-            background-color: #f0f0f0;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-top: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-
-        #cheerpj_target {
-            margin: 20px auto;
-            width: 600px; 
-            height: 450px; 
-            border: 2px solid #333;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            display: block; 
-            text-align: center;
-            line-height: 450px;
-            background-color: white;
-        }
-    </style>
-</head>
+    
+    </head>
 
 <body > <h1>Snake - Clásico Applet de Java</h1>
     
