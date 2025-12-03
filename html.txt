@@ -1,9 +1,0 @@
-<html>
-  <head>
-    <script src="https://cheerpj.com/latest/loader.js"></script>
-  </head>
-  <body>
-    <applet code="Snake.class" width="450" height="320"></applet>
-  </body>
-</html>
-
