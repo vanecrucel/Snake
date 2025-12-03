@@ -8,13 +8,29 @@
     <script src="https://cjrtnc.leaningtech.com/cjrt/main.js"></script> 
     
     <script>
+    // Variable para almacenar el ID del DIV donde inyectaremos el juego
+    const targetDivId = "cheerpj_target";
     
-        document.addEventListener('DOMContentLoaded', function() {
-    
-            setTimeout(function() {
-                cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
+    // Función de inicialización que usa un bucle para esperar a CheerpJ
+    function waitForCheerpj() {
+        // Chequear cada 500ms si la función existe
+        const checkInterval = setInterval(function() {
+            // CRÍTICO: Comprobar si la función cheerpjRunApplet está definida
+            if (typeof cheerpjRunApplet === 'function') {
+                clearInterval(checkInterval); // Detener el chequeo
+                
+                // 1. Ocultar el mensaje de "cargando..." si quieres
+                // document.getElementById(targetDivId).innerHTML = "Iniciando juego..."; 
+
+                // 2. Lanzar el Applet de forma robusta
+                cheerpjRunApplet(targetDivId, "Snake.class", 600, 450, 
                                  {archive: "Snake.jar", code: "Snake.class", jar: "Snake.jar"});
-            }, 100); 
+                }
+            }, 500); // Chequea cada medio segundo
+        }
+    
+    // Iniciar la espera activa tan pronto como el DOM esté listo
+        document.addEventListener('DOMContentLoaded', waitForCheerpj);
     </script>
     
     </head>
