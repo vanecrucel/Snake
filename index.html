@@ -7,18 +7,17 @@
     
     <script src="https://cjrtnc.leaningtech.com/cjrt/main.js"></script> 
     
-    <style>
-        body {
-            background-color: #f0f0f0;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-top: 20px;
+    <script>
+       
+        function initializeGame() {
+            cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
+                             {archive: "Snake.jar", code: "Snake.class", jar: "Snake.jar"});
         }
-        h1 {
-            color: #333;
-        }
+    </script>
 
+    <style>
+        body { }
+        h1 { color: #333; }
         #cheerpj_target {
             margin: 20px auto;
             width: 600px; 
@@ -33,21 +32,13 @@
     </style>
 </head>
 
-<body>
-
-    <h1>Snake - Clásico Applet de Java</h1>
+<body onload="initializeGame()"> <h1>Snake - Clásico Applet de Java</h1>
     
     <div id="cheerpj_target">
-        El juego está cargando. Si tarda más de 30 segundos, revise el empaquetado del JAR.
+        El juego está cargando. Espere un momento...
     </div>
 
     <p>Utiliza las teclas de flecha o WASD para jugar.</p>
     
-    <script>
-        
-        cheerpjRunApplet("cheerpj_target", "Snake.class", 600, 450, 
-                         {archive: "Snake.jar", code: "Snake.class", jar: "Snake.jar"});
-    </script>
-
 </body>
 </html>
